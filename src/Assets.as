@@ -7,7 +7,7 @@ package
 	
 	public class Assets
 	{
-		[Embed(source="../media/graphics/bgWelcome.jpg")]
+		[Embed(source="../media/graphics/BgWelcome.jpg")]
 		public static const BgWelcome:Class;
 		
 		[Embed(source="../media/graphics/welcome_hero.png")]

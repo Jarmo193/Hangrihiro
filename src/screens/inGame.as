@@ -3,13 +3,14 @@ package screens
 	import objects.Hero;
 	
 	import starling.display.Sprite;
+	import starling.errors.AbstractClassError;
 	import starling.events.Event;
 	
-	public class inGame extends Sprite
+	public class InGame extends Sprite
 	{
 		private var hero:Hero;
 		
-		public function inGame()
+		public function InGame()
 		{
 			super();
 			this.addEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);
@@ -27,6 +28,16 @@ package screens
 			hero.x = stage.stageWidth/2;
 			hero.y = stage.stageHeight/2;
 			this.addChild(hero);
+		}
+		
+		public function disposeTemporarily():void
+		{
+			this.visible = false;
+		}
+		
+		public function initialize():void
+		{
+			this.visible = true;
 		}
 	}
 }

@@ -5,9 +5,11 @@ package screens
 	import starling.display.Sprite;
 	import starling.errors.AbstractClassError;
 	import starling.events.Event;
+	import objects.GameBackground;
 	
 	public class InGame extends Sprite
 	{
+		private var bg:GameBackground;
 		private var hero:Hero;
 		
 		public function InGame()
@@ -24,6 +26,10 @@ package screens
 		
 		private function drawGame():void
 		{
+			bg = new GameBackground();
+			bg.speed = 10;
+			this.addChild(bg);
+			
 			hero = new Hero();
 			hero.x = stage.stageWidth/2;
 			hero.y = stage.stageHeight/2;
